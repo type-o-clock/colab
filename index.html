@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoLab Type o'Clock | Foundry</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CoLab Type o'Clock</h1>
+        <div id="clock">00:00:00</div>
+    </header>
+
+    <main>
+        
+        <section class="font-row">
+            <div class="font-info">
+                <span>01. Pixelfont Regular </span>
+                <span class="student-name">Designed by: Student Name</span>
+            </div>
+            <div class="font-preview pixel-regular" contenteditable="true" spellcheck="false">
+                Quick Brown Fox
+            </div>
+            <div class="download-container">
+                <a href="fonts/Pixelfont-Regular.otf" class="btn-download" download>Download OTF</a>
+            </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>02. Pixelfont Cross</span>
+                <span class="student-name">Designed by: Student Name</span>
+            </div>
+            <div class="font-preview pixel-cross" contenteditable="true" spellcheck="false">
+                Crossing Paths
+            </div>
+            <div class="download-container">
+                <a href="fonts/Pixelfont-Cross.otf" class="btn-download" download>Download OTF</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Type o'Clock Foundry &copy; 2026 University CoLab
+    </footer>
+
+    <script>
+        // Update the digital clock
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.getHours().toString().padStart(2, '0') + ":" + 
+                               now.getMinutes().toString().padStart(2, '0') + ":" + 
+                               now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').innerText = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Optional: Prevent 'Enter' key from creating new lines in the preview
+        document.querySelectorAll('.font-preview').forEach(el => {
+            el.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
