@@ -183,20 +183,20 @@ h1 { margin: 0; font-size: 0.75rem; font-weight: bold; }
 }
 
 /* Specifically target placeholders */
-.handlich-display { font-family: 'Handlich-Display', sans-serif; }
-.handlich-text { font-family: 'Handlich-Text', sans-serif; }
-.haltimezone-wonky { font-family: 'HALTimezone-Wonky', sans-serif; }
-.pane2k-regular { font-family: 'PANE2K-Regular', sans-serif; }
-.branchout-regular { font-family: 'BranchOut-Regular', sans-serif; }
-.extrasa-regular { font-family: 'Extrasa-Regular', sans-serif; }
-.untitled { font-family: '&&&-Untitled', sans-serif; }
-.alley-regular { font-family: 'Alley-Regular', sans-serif; }
-.kantigundmonol { font-family: 'Kantigund-Monol', sans-serif; }
-.finnnegan-regular { font-family: 'FinnneganSlab-Regular', sans-serif; }
-.finnnegan-light { font-family: 'FinnneganSlab-Light', sans-serif; }
-.finnnegan-bold { font-family: 'FinnneganSlab-Bold', sans-serif; }
-.m2-regular { font-family: 'M2-Regular', sans-serif; }
-.pocketclouds-lig { font-family: 'PocketClouds-Lig', sans-serif; }
+.handlich-display { font-family: 'Handlich-Display'; }
+.handlich-text { font-family: 'Handlich-Text'; }
+.haltimezone-wonky { font-family: 'HALTimezone-Wonky'; }
+.pane2k-regular { font-family: 'PANE2K-Regular'; }
+.branchout-regular { font-family: 'BranchOut-Regular'; }
+.extrasa-regular { font-family: 'Extrasa-Regular'; }
+.untitled { font-family: '&&&-Untitled'; }
+.alley-regular { font-family: 'Alley-Regular'; }
+.kantigundmonol { font-family: 'Kantigund-Monol'; }
+.finnnegan-regular { font-family: 'FinnneganSlab-Regular'; }
+.finnnegan-light { font-family: 'FinnneganSlab-Light'; }
+.finnnegan-bold { font-family: 'FinnneganSlab-Bold'; }
+.m2-regular { font-family: 'M2-Regular'; }
+.pocketclouds-lig { font-family: 'PocketClouds-Lig'; }
 
 
 /* 4. DOWNLOAD BUTTON */
