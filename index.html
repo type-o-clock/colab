@@ -3,51 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoLab Type o'Clock | Foundry</title>
+    <title>CoLab TYPE O'CLOCK </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+<header>
         <h1>CoLab Type o'Clock</h1>
-        <div id="clock">00:00:00</div>
+        
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <div id="clock">00:00:00</div>
+            
+            <svg id="theme-btn" width="18" height="18" viewBox="0 0 20 20" style="cursor: pointer; display: block; overflow: visible;">
+                <defs>
+                    <linearGradient id="split-half" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="50%" stop-color="var(--bg-color)" />
+                        <stop offset="50%" stop-color="var(--text-color)" />
+                    </linearGradient>
+                </defs>
+                <circle cx="10" cy="10" r="9" fill="url(#split-half)" stroke="var(--text-color)" stroke-width="2"/>
+            </svg>
+        </div>
     </header>
 
     <main>
-        
+
         <section class="font-row">
             <div class="font-info">
-                <span>01. Pixelfont Regular </span>
-                <span class="student-name">Designed by: Student Name</span>
+               <span>HALTimezone Wonky</span>
+                <span class="student-name">Designed by: Antonio Zafranovic</span>
             </div>
-            <div class="font-preview pixel-regular" contenteditable="true" spellcheck="false">
-                Quick Brown Fox
+            <div class="font-preview haltimezone-wonky" contenteditable="true" spellcheck="false">
+                The quick brown fox jumps over the lazy dog. 
             </div>
             <div class="download-container">
-                <a href="fonts/Pixelfont-Regular.otf" class="btn-download" download>Download OTF</a>
+                <a href="fonts/HALTimezoneWonky-Regular.otf" class="btn-download" download>Download</a>
             </div>
         </section>
 
         <section class="font-row">
             <div class="font-info">
-                <span>02. Pixelfont Cross</span>
-                <span class="student-name">Designed by: Student Name</span>
+               <span>PANE2K</span>
+                <span class="student-name">Designed by: Xinyue Wan</span>
             </div>
-            <div class="font-preview pixel-cross" contenteditable="true" spellcheck="false">
-                Crossing Paths
+            <div class="font-preview pane2k-regular" contenteditable="true" spellcheck="false">
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 
             </div>
             <div class="download-container">
-                <a href="fonts/Pixelfont-Cross.otf" class="btn-download" download>Download OTF</a>
+                <a href="fonts/PANE2K-Regular.otf" class="btn-download" download>Download</a>
+            </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>Handlich  </span>
+                <span class="student-name">Designed by: Nina Dür</span>
+            </div>
+          <div class="font-preview handlich-display" contenteditable="true" spellcheck="false">
+            &#x0035;&#x0036;&#x0037;&#x2756;&#x25B2;&#x25BC;&#x25BA;&#x25C4;</div>
+         
+          <div class="font-preview handlich-text" contenteditable="true" spellcheck="false">
+            &#x0035;&#x0036;&#x0037;&#x2756;&#x25B2;&#x25BC;&#x25BA;&#x25C4;
+          </div>
+            
+          <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/NDuer-Handlich.zip" class="btn-download" download="NDuer_Handlich.zip">Download</a>
+          </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>Branch Out </span>
+                <span class="student-name">Designed by: Mircea Nitescu</span>
+            </div>
+          <div class="font-preview branchout-regular" contenteditable="true" spellcheck="false">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        </div>
+        <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/BranchOut-Regular.otf" class="btn-download" download>Download</a>
+          </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>Extrasa </span>
+                <span class="student-name">Designed by: Marie Hindinger</span>
+            </div>
+          <div class="font-preview extrasa-regular" contenteditable="true" spellcheck="false">
+            movement overall novel alone name moral
+        </div>
+          <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/Extrasa-Regular.otf" class="btn-download" download>Download</a>
+          </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>&&&1 Untitled </span>
+                <span class="student-name">Designed by: Alara Tatar</span>
+            </div>
+          <div class="font-preview untitled" contenteditable="true" spellcheck="false">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789
+        </div>
+          <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/&&&1Untitled.otf" class="btn-download" download>Download</a>
+          </div>
+        </section>
+
+         <section class="font-row">
+            <div class="font-info">
+                <span>Alley</span>
+                <span class="student-name">Designed by: Madalina Craciun</span>
+            </div>
+          <div class="font-preview alley-regular" contenteditable="true" spellcheck="false">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        </div>
+          <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/Alley-Regular.otf" class="btn-download" download>Download</a>
+          </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>kantigund monol</span>
+                <span class="student-name">Designed by: Thyra Bergfeld</span>
+            </div>
+          <div class="font-preview kantigundmonol" contenteditable="true" spellcheck="false">
+            i love sudoku 0123456789
+        </div>
+          <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/kantigundmonol-Regular.otf" class="btn-download" download>Download</a>
+          </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>Fin(n)egan Slab</span>
+                <span class="student-name">Designed by: Oisín Allen</span>
+            </div>
+          <div class="font-preview finnnegan-light" contenteditable="true" spellcheck="false">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+          </div>
+          <div class="font-preview finnnegan-regular" contenteditable="true" spellcheck="false">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+          </div>
+          <div class="font-preview finnnegan-bold" contenteditable="true" spellcheck="false">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+          </div>
+          <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/Fin(n)eganSlab.zip" class="btn-download" download>Download</a>
+          </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>M2</span>
+                <span class="student-name">Designed by: Alexa Meinzer</span>
+            </div>
+            <div class="font-preview m2-regular" contenteditable="true" spellcheck="false">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </div>
+            <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/M2-Regular.ttf" class="btn-download" download>Download</a>
+            </div>
+        </section>
+
+        <section class="font-row">
+            <div class="font-info">
+                <span>Pocket Clouds</span>
+                <span class="student-name">Designed by: Alexa Meinzer</span>
+            </div>
+            <div class="font-preview pocketclouds-lig" contenteditable="true" spellcheck="false">
+            ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </div>
+            <div class="download-container" style="margin-top: 15px;">
+                <a href="fonts/PocketClouds_ligs.otf" class="btn-download" download>Download</a>
             </div>
         </section>
 
     </main>
 
     <footer>
-        Type o'Clock Foundry &copy; 2026 University CoLab
+        Type o'Clock  &copy; 2026 
+        <br> Graphic Design Arnhem, ArtEZ University of the Arts
     </footer>
 
-    <script>
+   <script>
         // Update the digital clock
         function updateClock() {
             const now = new Date();
@@ -59,13 +200,45 @@
         setInterval(updateClock, 1000);
         updateClock();
 
-        // Optional: Prevent 'Enter' key from creating new lines in the preview
+        // Prevent 'Enter' key from creating new lines in the preview
         document.querySelectorAll('.font-preview').forEach(el => {
             el.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();
                 }
             });
+        });
+
+        // MULTI-THEME ROTATION ENGINE
+        const themes = ['default', 'inverted', 'neon', 'matrix', 'clay'];
+        let currentThemeIndex = 0;
+        const bodyElement = document.body;
+
+        document.getElementById('theme-btn').addEventListener('click', () => {
+            bodyElement.classList.remove(...themes.map(t => `theme-${t}`));
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            if (themes[currentThemeIndex] !== 'default') {
+                bodyElement.classList.add(`theme-${themes[currentThemeIndex]}`);
+            }
+        });
+
+        // ==========================================
+        // NEW: FONTS SHUFFLE ENGINE
+        // ==========================================
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainContainer = document.querySelector('main');
+            // Grab only the direct font-row sections
+            const fontRows = Array.from(mainContainer.querySelectorAll('.font-row'));
+
+            // Fisher-Yates Shuffle Algorithm
+            for (let i = fontRows.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                // Swap elements in the array
+                [fontRows[i], fontRows[j]] = [fontRows[j], fontRows[i]];
+            }
+
+            // Append them back into <main> in the new randomized order
+            fontRows.forEach(row => mainContainer.appendChild(row));
         });
     </script>
 </body>

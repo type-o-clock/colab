@@ -1,56 +1,142 @@
+/* 0. DEFINE THEME VARIABLE COLOR TOKENS */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+body.theme-inverted {
+    --bg-color: #212121;
+    --text-color: #ffffff;
+}
+
+body.theme-neon {
+    --bg-color: #9ef9fe;
+    --text-color: #ff2200;
+}
+
+body.theme-matrix {
+    --bg-color: #018c5e;
+    --text-color: #fb81c0;
+}
+
+body.theme-clay {
+    --bg-color: #ebfc4f;
+    --text-color: #340de1;
+}
+
 /* 1. TYPEFACE SETUP */
 @font-face {
-    font-family: 'Pixelfont-Regular';
-    src: url('fonts/Pixelfont-Regular.otf') format('opentype');
+    font-family: 'Handlich-Display';
+    src: url('fonts/Handlich-Display.otf') format('opentype');
 }
+
 @font-face {
-    font-family: 'Pixelfont-Cross';
-    src: url('fonts/Pixelfont-Cross.otf') format('opentype');
+    font-family: 'Handlich-Text';
+    src: url('fonts/Handlich-Text.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'HALTimezone-Wonky';
+    src: url('fonts/HALTimezoneWonky-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'PANE2K-Regular';
+    src: url('fonts/PANE2K-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BranchOut-Regular';
+    src: url('fonts/BranchOut-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Extrasa-Regular';
+    src: url('fonts/Extrasa-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: '&&&-Untitled';
+    src: url('fonts/&&&1Untitled.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Alley-Regular';
+    src: url('fonts/Alley-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Kantigund-Monol';
+    src: url('fonts/kantigundmonol-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'FinnneganSlab-Regular';
+    src: url('fonts/Fin\(n\)eganSlab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FinnneganSlab-Light';
+    src: url('fonts/Fin\(n\)eganSlab-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FinnneganSlab-Bold';
+    src: url('fonts/Fin\(n\)eganSlab-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'M2-Regular';
+    src: url('fonts/M2-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PocketClouds-Lig';
+    src: url('fonts/PocketClouds_ligs.otf') format('truetype');
 }
 
 /* 2. GLOBAL STYLES */
 body {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     font-family: 'Helvetica', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 header {
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--text-color);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     position: sticky;
     top: 0;
-    background: #fff;
+    background: var(--bg-color);
     z-index: 100;
     text-transform: uppercase;
+    transition: background-color 0.2s ease, border-bottom-color 0.2s ease;
 }
 
-h1 { margin: 0; font-size: 1.2rem; font-weight: 900; }
-#clock { font-size: 0.9rem; font-family: monospace; }
+h1 { margin: 0; font-size: 0.75rem; font-weight: bold; }
+#clock { font-size: 0.85rem; font-family: monospace; }
 
 /* 3. ROW LAYOUT */
 .font-row {
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--text-color);
     padding: 20px 20px;
     transition: background 0.1s ease;
-}
-
-.font-row:hover {
-    background-color: #f9f9f9;
 }
 
 /* Metadata Line (Name & Student) */
 .font-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
     font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: bold;
@@ -58,25 +144,60 @@ h1 { margin: 0; font-size: 1.2rem; font-weight: 900; }
 }
 
 .student-name {
-    color: #000;
+    color: var(--text-color);
 }
 
 /* Interactive Preview Area */
 .font-preview {
-    font-size: clamp(2rem, 8vw, 6rem); /* Responsive sizing */
+    font-size: clamp(3.5rem, 8vw, 6rem); 
     line-height: 1.3;
     margin-bottom: 10px;
-    outline: none; /* Removes the blue box when clicking */
+    outline: none; 
     white-space: nowrap;
-    overflow: hidden;
+    color: var(--text-color);
+    
+    /* SCROLL FIXES */
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch; 
+    
+    /* EDGE-TO-EDGE OVERRIDE TRICK */
+    margin-left: -20px;       
+    margin-right: -20px;      
+    padding-left: 20px;       
+    padding-right: 20px;      
+    width: calc(100% + 40px); 
+    
     border: none;
     background: transparent;
-    width: 100%;
+    box-sizing: border-box;   
+}
+
+/* Hides the scrollbar track to keep the layout minimal */
+.font-preview::-webkit-scrollbar {
+    display: none; 
+}
+.font-preview {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 
 /* Specifically target placeholders */
-.pixel-regular { font-family: 'Pixelfont-Regular', sans-serif; }
-.pixel-cross { font-family: 'Pixelfont-Cross', sans-serif; }
+.handlich-display { font-family: 'Handlich-Display', sans-serif; }
+.handlich-text { font-family: 'Handlich-Text', sans-serif; }
+.haltimezone-wonky { font-family: 'HALTimezone-Wonky', sans-serif; }
+.pane2k-regular { font-family: 'PANE2K-Regular', sans-serif; }
+.branchout-regular { font-family: 'BranchOut-Regular', sans-serif; }
+.extrasa-regular { font-family: 'Extrasa-Regular', sans-serif; }
+.untitled { font-family: '&&&-Untitled', sans-serif; }
+.alley-regular { font-family: 'Alley-Regular', sans-serif; }
+.kantigundmonol { font-family: 'Kantigund-Monol', sans-serif; }
+.finnnegan-regular { font-family: 'FinnneganSlab-Regular', sans-serif; }
+.finnnegan-light { font-family: 'FinnneganSlab-Light', sans-serif; }
+.finnnegan-bold { font-family: 'FinnneganSlab-Bold', sans-serif; }
+.m2-regular { font-family: 'M2-Regular', sans-serif; }
+.pocketclouds-lig { font-family: 'PocketClouds-Lig', sans-serif; }
+
 
 /* 4. DOWNLOAD BUTTON */
 .download-container {
@@ -85,9 +206,9 @@ h1 { margin: 0; font-size: 1.2rem; font-weight: 900; }
 }
 
 .btn-download {
-    border: 2px solid #000;
-    background: #fff;
-    color: #000;
+    border: 2px solid var(--text-color);
+    background: var(--bg-color);
+    color: var(--text-color);
     padding: 8px 20px;
     text-decoration: none;
     font-size: 0.7rem;
@@ -97,14 +218,51 @@ h1 { margin: 0; font-size: 1.2rem; font-weight: 900; }
 }
 
 .btn-download:hover {
-    background: #000;
-    color: #fff;
+    background: var(--text-color);
+    color: var(--bg-color);
 }
 
 footer {
-    padding: 100px 20px 40px 20px;
-    font-size: 0.7rem;
+    padding: 100px 20px 20px 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-align: center;
+}
+
+/* Target mobile screens up to 768px wide */
+@media (max-width: 768px) {
+    .font-row {
+        position: relative; 
+        padding-right: 55px; 
+    }
+
+    .student-name {
+        writing-mode: vertical-rl; 
+        text-orientation: mixed;   
+        
+        max-height: calc(100% - 40px); 
+        
+        position: absolute;
+        right: 0;                  
+        top: 0;                    
+        margin: 0;
+
+        background-color: var(--bg-color);    
+        border-left: 2px solid var(--text-color); 
+        transition: background-color 0.2s ease, border-left-color 0.2s ease;
+        
+        /* FIXED COORDINATE FIXES */
+        width: 35px;               
+        padding: 20px 20px 20px 20px;         
+        text-align: left;        
+        
+        height: calc(100% - 40px); 
+        display: flex;
+        flex-direction: column;    
+        justify-content: top;   
+        align-items: left;       
+        z-index: 10;               
+    }
 }
